@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Styled, jsx } from 'theme-ui'
-import { Global } from '@emotion/core'
+import { Global } from '@emotion/react'
 
 import Header, { headerHeight } from './header'
 

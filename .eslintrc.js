@@ -7,7 +7,7 @@ module.exports = {
     node: true,
     jest: true
   },
-  plugins: ['jest'],
+  plugins: ['jest', '@emotion'],
   rules: {
     'import/no-unresolved': 'off',
     'no-console': 'off',
@@ -22,7 +22,9 @@ module.exports = {
     'react/display-name': 'off',
     'react/no-children-prop': 'off',
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'off'
+    'react-hooks/exhaustive-deps': 'off',
+    '@emotion/jsx-import': 'error',
+    '@emotion/pkg-renaming': 'error'
   },
   extends: [
     'react-app',

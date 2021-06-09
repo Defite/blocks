@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Styled } from 'theme-ui'
-import { Global } from '@emotion/core'
+import { Global } from '@emotion/react'
 import { Container, Box } from '@theme-ui/components'
 import { Link } from 'gatsby'
 import { Twitter, GitHub, Mail } from 'react-feather'

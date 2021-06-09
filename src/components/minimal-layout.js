@@ -2,7 +2,7 @@
 import { jsx, Styled } from 'theme-ui'
 import { Container } from '@theme-ui/components'
 import { Link } from 'gatsby'
-import { Global } from '@emotion/core'
+import { Global } from '@emotion/react'
 
 import SEO from './seo'
 

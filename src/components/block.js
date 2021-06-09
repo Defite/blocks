@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { jsx, Styled } from 'theme-ui'
 import * as components from '@theme-ui/components'
-import { Global } from '@emotion/core'
+import { Global } from '@emotion/react'
 
 import * as blocks from '@blocks/react'
 import { InlineRender } from 'blocks-ui'
@@ -13,7 +13,7 @@ import SEO from './seo'
 
 const { Container } = components
 
-const isComponent = name => /^[A-Z]/.test(name)
+const isComponent = (name) => /^[A-Z]/.test(name)
 
 const scope = {
   React,

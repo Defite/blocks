@@ -1,6 +1,6 @@
 import React from 'react'
 import { jsx, Context, useThemeUI, merge } from 'theme-ui'
-import { ThemeContext as Emotion } from '@emotion/core'
+import { ThemeContext as Emotion } from '@emotion/react'
 
 const reducer = (state, next) => merge(state, next)
 

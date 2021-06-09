@@ -11,7 +11,7 @@ import {
 } from 'react'
 import { createPortal } from 'react-dom'
 import { ZoomIn, ZoomOut } from 'react-feather'
-import { CacheProvider, Global } from '@emotion/core'
+import { CacheProvider, Global } from '@emotion/react'
 import createCache from '@emotion/cache'
 
 import { IconButton } from './ui'
@@ -108,7 +108,7 @@ export const PreviewArea = ({ children }) => {
   const [zoomLevel, setZoomLevel] = useState(1)
   const shiftKeyDown = useRef()
   const frames = useRef([])
-  const setFrame = index => ref => (frames.current[index] = ref)
+  const setFrame = (index) => (ref) => (frames.current[index] = ref)
 
   useScrollSync(frames)
 
@@ -135,8 +135,8 @@ export const PreviewArea = ({ children }) => {
           type="number"
           min={MIN_ZOOM_LEVEL}
           value={(zoomLevel * 100).toFixed(0)}
-          onKeyDown={event => (shiftKeyDown.current = event.shiftKey)}
-          onChange={event => {
+          onKeyDown={(event) => (shiftKeyDown.current = event.shiftKey)}
+          onChange={(event) => {
             const nextZoomLevel = parseFloat(event.target.value) / 100
             const shiftAmount = nextZoomLevel < zoomLevel ? -0.1 : 0.1
             setZoomLevel(
@@ -171,7 +171,9 @@ export const PreviewArea = ({ children }) => {
           min={MIN_ZOOM_LEVEL}
           max={200}
           value={(zoomLevel * 100).toFixed(0)}
-          onChange={event => setZoomLevel(parseFloat(event.target.value) / 100)}
+          onChange={(event) =>
+            setZoomLevel(parseFloat(event.target.value) / 100)
+          }
           style={{ width: 80 }}
         />
         <IconButton
@@ -182,7 +184,7 @@ export const PreviewArea = ({ children }) => {
         <Label m={0}>
           <Checkbox
             checked={wrap}
-            onChange={event => setWrap(event.target.checked)}
+            onChange={(event) => setWrap(event.target.checked)}
           />
           Wrap
         </Label>
